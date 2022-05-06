@@ -39,16 +39,6 @@ const run = async () =>{
 
         })
 
-        //get individual data from server
-
-        app.get('/product/:email', async(req, res) =>{
-            const email = req.query.email;
-            const query = {email: email};
-            const cursor = productCollection.find(query);
-            const product = await cursor.toArray();
-            res.send(product);
-
-        })
 
         // get product by id
 
