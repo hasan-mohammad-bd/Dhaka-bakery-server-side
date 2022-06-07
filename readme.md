@@ -9,7 +9,7 @@ I worked on this kitchen tools, where I am making kitchen tools product . all fe
 ## About this project.
 
 - The site is fully responsive.
-- Mordan UI has been used.
+- Modern UI has been used.
 - It's a warehouse inventory management website.
 - Product details show product name, description, price,
 and available quantity.
