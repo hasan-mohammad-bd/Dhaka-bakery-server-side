@@ -19,7 +19,7 @@ and available quantity.
 
 - React 
 - React Router
-- React Tostify 
+- React Testify 
 - React Icon 
 - Tailwind CSS
 - Firebase Authentication
