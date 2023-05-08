@@ -12,8 +12,15 @@ app.use(express.json());
 
 
 
-const uri = "mongodb+srv://user13:mau6Yvv72fD7X32T@cluster0.ou2fz.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const uri = `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}@cluster0.ou2fz.mongodb.net/?retryWrites=true&w=majority`;
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
 
 const run = async () =>{
     try{
